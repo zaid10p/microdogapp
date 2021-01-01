@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the Test Dog Micro FrontEnd App used in Main Host app.
+Clone Host main app 
 
 ## Available Scripts
 
