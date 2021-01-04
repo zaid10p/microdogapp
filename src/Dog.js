@@ -7,9 +7,12 @@ function Dog() {
   const [dogImg, setDogImg] = useState(null);
 
   const state = useSelector(state => state.counter);
-  console.log("dog state ", state);
   
   const dispatch = useDispatch();
+  useEffect( () => {
+    console.log("dispatching in Dog comp ..");
+    dispatch(incrementByAmount(1));
+  },[dispatch])
 
   const fetchDoggo = () => {
     setDogImg("");
@@ -18,7 +21,6 @@ function Dog() {
       .then((dogInfo) => {
         setDogImg(dogInfo.message);
       });
-    dispatch(incrementByAmount(1));
   };
 
   useEffect(() => {
